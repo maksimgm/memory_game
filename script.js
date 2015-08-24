@@ -53,7 +53,6 @@ function classAdder(){
     memoryBoxes[i].select = newImg[i];
     memoryBoxes[i].val = i;
     memoryBoxes[i].addEventListener('click',function(){
-      console.log("THIS--->>>>",this);
     // does not have a select class
       if(firstMoveOfTurn.currentWord===""){
         this.classList.add(this.select);
@@ -62,8 +61,7 @@ function classAdder(){
       }else {
           this.classList.add(this.select);
           if(firstMoveOfTurn.currentWord === this.select){
-            //check if 2nd clicked box has the current word
-            console.log("|^._.^|");
+            //check if 2nd clicked box has the current word    
             this.classList.add(this.select);
           }else{
             // set timeout to let second selection display...
@@ -79,10 +77,9 @@ function classAdder(){
         //matching flow
       firstMoveOfTurn.currentWord = "";
       firstMoveOfTurn.selectIndex = "";
-    }
-  
-  });
-}
+      }
+    });
+  }
 }
 // var winningMatch = [["angel","angel"],["doc","doc"],["hearts","hearts"],["kisses","kisses"],["nervous","nervous"],["tounge","tounge"]];
 
